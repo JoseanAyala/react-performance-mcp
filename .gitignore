@@ -1,0 +1,6 @@
+node_modules/
+.claude/settings.local.json
+.DS_Store
+*.log
+# Per-run scenario history (each scenarios dir also writes its own .gitignore)
+**/perf/scenarios/.results/

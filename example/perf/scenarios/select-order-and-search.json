@@ -1,0 +1,28 @@
+{
+  "description": "Open an order from the table, then type in the order search box",
+  "path": "/",
+  "steps": [
+    {
+      "action": "click",
+      "selector": "tr:has-text(\"10000\")",
+      "fallbackSelectors": [
+        "tr:has-text(\"$526.61\")",
+        "#root > div > main > div:nth-of-type(2) > table > tbody > tr >> nth=0"
+      ]
+    },
+    {
+      "action": "wait",
+      "ms": 1800
+    },
+    {
+      "action": "type",
+      "text": "test",
+      "selector": "#search",
+      "fallbackSelectors": [
+        "input[placeholder=\"Search customer or order #\"]",
+        "#root > div > main > div:nth-of-type(1) > input"
+      ]
+    }
+  ],
+  "runs": 3
+}

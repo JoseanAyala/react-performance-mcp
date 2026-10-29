@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "react-perf": {
+      "type": "http",
+      "url": "http://localhost:5173/__react-perf/mcp"
+    }
+  }
+}

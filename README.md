@@ -27,6 +27,23 @@ claude mcp add --transport http react-perf http://localhost:5173/__react-perf/mc
 
 Open the app in any browser, do the slow thing, then tell the agent to fix it.
 
+### Codex and other MCP clients
+
+Any client that supports MCP over streamable HTTP works. For Codex:
+
+```sh
+codex mcp add react-perf --url http://localhost:5173/__react-perf/mcp
+```
+
+or in `~/.codex/config.toml` / `.codex/config.toml`:
+
+```toml
+[mcp_servers.react-perf]
+url = "http://localhost:5173/__react-perf/mcp"
+```
+
+The fix loop is sent as MCP server instructions, which not every client passes to the model. Copy the section in [AGENTS.md](AGENTS.md) into your app's `AGENTS.md` (or `CLAUDE.md`) so the agent always follows it.
+
 ## MCP tools
 
 | Tool | What it returns |
